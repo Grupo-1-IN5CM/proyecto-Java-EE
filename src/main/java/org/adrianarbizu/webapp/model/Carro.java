@@ -17,25 +17,25 @@ public class Carro {
     private String nombreCarro;
     private String descripcionCarro;
     private String marcaCarro;
-    private Double Precio;
+    private Double precioCarro;
 
     public Carro() {
 
     }
 
-    public Carro(int carroId, String nombreCarro, String descripcionCarro, String marcaCarro, Double Precio) {
+    public Carro(int carroId, String nombreCarro, String descripcionCarro, String marcaCarro, Double precioCarro) {
         this.carroId = carroId;
         this.nombreCarro = nombreCarro;
         this.descripcionCarro = descripcionCarro;
         this.marcaCarro = marcaCarro;
-        this.Precio = Precio;
+        this.precioCarro = precioCarro;
     }
 
-    public Carro(String nombreCarro, String descripcionCarro, String marcaCarro, Double Precio) {
+    public Carro(String nombreCarro, String descripcionCarro, String marcaCarro, Double precioCarro) {
         this.nombreCarro = nombreCarro;
         this.descripcionCarro = descripcionCarro;
         this.marcaCarro = marcaCarro;
-        this.Precio = Precio;
+        this.precioCarro = precioCarro;
     }
 
     public int getCarroId() {
@@ -70,16 +70,16 @@ public class Carro {
         this.marcaCarro = marcaCarro;
     }
 
-    public Double getPrecio() {
-        return Precio;
+    public Double getPrecioCarro() {
+        return precioCarro;
     }
 
-    public void setPrecio(Double Precio) {
-        this.Precio = Precio;
+    public void setPrecioCarro(Double precioCarro) {
+        this.precioCarro = precioCarro;
     }
 
     @Override
     public String toString() {
-        return "Carro{" + "carroId=" + carroId + ", nombreCarro=" + nombreCarro + ", descripcionCarro=" + descripcionCarro + ", marcaCarro=" + marcaCarro + ", Precio=" + Precio + '}';
+        return "Carro{" + "carroId=" + carroId + ", nombreCarro=" + nombreCarro + ", descripcionCarro=" + descripcionCarro + ", marcaCarro=" + marcaCarro + ", precioCarro=" + precioCarro + '}';
     }
 }

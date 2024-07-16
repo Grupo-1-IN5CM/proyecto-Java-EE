@@ -13,7 +13,7 @@
     <body>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Sistema de gestión de productos</a>
+                <a class="navbar-brand" href="#">Sistema de gestión de Carros</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,8 +26,8 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link active" href="../index.jsp">Inicio</a>
-                                <a class="nav-link" aria-current="page" href="formulario-productos.jsp">Formulario Producto</a>
-                                <a class="nav-link active" href="../carro-servlet">Lista Productos</a>
+                                <a class="nav-link" aria-current="page" href="formulario-productos.jsp">Formulario Carros</a>
+                                <a class="nav-link active" href="../carro-servlet">Lista Carros</a>
                             </li>
                         </ul>
                     </div>
@@ -35,7 +35,7 @@
             </div>
         </nav>  
         <div class="container text-center">
-            <h1>Lista Carros</h1>
+            <h1>Formulario</h1>
             <% ArrayList<String> datosCarro = (ArrayList) request.getAttribute("datosCarro"); %>
             <% if (datosCarro != null) { %>
             <% for (String producto : datosCarro) {%>
@@ -56,25 +56,25 @@
                 </ul>
             </div>
             <% }%>
-            <form action="/SGBDConsesionariaIN5CM//carro-servlet" method="post" enctype="multipart/form-data">
+            <form action="/SGBDConsesionariaIN5CM/carro-servlet" method="post" enctype="multipart/form-data">
                 <div class="form-floating mb-4">
                     <input class="form-control" id="nombreCarro" name="nombreCarro" type="text">
-                    <label for="nombreProducto">Nombre del Carro</label>
+                    <label for="nombreCarro">Nombre del Carro</label>
                 </div>
 
                 <div class="form-floating mt-4">
                     <textarea class="form-control" id="descripcionCarro" name="descripcionCarro" type="text"></textarea>
-                    <label for="descripcionProducto">Descripción del Carro</label>
+                    <label for="descripcionCarro">Descripción del Carro</label>
                 </div>
 
                 <div class="form-floating mt-4">
                     <input class="form-control" id="marcaCarro" name="marcaCarro" type="text">
-                    <label for="marcaProducto">Marca del Carro</label>
+                    <label for="marcaCarro">Marca del Carro</label>
                 </div>
 
                 <div class="form-floating mt-4">
                     <input class="form-control" id="precioCarro" name="precioCarro" type="text" style="color: #066699 ">
-                    <label for="precioProducto">Q.</label>
+                    <label for="precioCarroo">Q.</label>
                 </div>
                 <div class="form-floating mt-5">
                     <input type="submit" value="Agregar" class="btn btn-success">

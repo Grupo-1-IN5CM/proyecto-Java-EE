@@ -39,7 +39,7 @@ public class CarroServlet extends HttpServlet {
         String nombreCarro = req.getParameter("nombreCarro");
         String descripcionCarro = req.getParameter("descripcionCarro");
         String marcaCarro = req.getParameter("marcaCarro");
-        String precio = req.getParameter("precio");
+        String precioCarro = req.getParameter("precioCarro");
 
         if (nombreCarro == null || nombreCarro.trim().isEmpty()) {
             errores.add("El nombre del carro es obligatorio.");
@@ -50,7 +50,7 @@ public class CarroServlet extends HttpServlet {
         if (marcaCarro == null || marcaCarro.trim().isEmpty()) {
             errores.add("La marca del carro es obligatoria.");
         }
-        if (precio == null || precio.trim().isEmpty()) {
+        if (precioCarro == null || precioCarro.trim().isEmpty()) {
             errores.add("El precio del carro es obligatorio.");
         }
 
@@ -58,7 +58,7 @@ public class CarroServlet extends HttpServlet {
             datosCarro.add(nombreCarro);
             datosCarro.add(descripcionCarro);
             datosCarro.add(marcaCarro);
-            datosCarro.add("Q." + precio);
+            datosCarro.add("Q." + precioCarro);
 
             req.setAttribute("datosCarro", datosCarro);
             getServletContext().getRequestDispatcher("/formulario-productos/formulario-productos.jsp").forward(req, resp);

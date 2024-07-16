@@ -5,8 +5,6 @@ create database SGBDConsesionariaIN5CM;
 use SGBDConsesionariaIN5CM;        
 
 
-
-
 create table Usuario(
 	usuarioId int not null auto_increment,
     nombreUsuario varchar(30),
@@ -62,6 +60,23 @@ Delimiter $$
         End$$
 Delimiter ;
 
+
+Delimiter $$
+	Create procedure sp_ListarUsuario()
+		Begin
+			Select
+				Usuario.usuarioId,
+                Usuario.nombreUsuario,
+                Usuario.contraUsuario
+            from Usuario;
+        End$$
+Delimiter ;
+
+insert into Usuario(nombreUsuario, contraUsuario) values
+(' Luis', '456875'),
+('Juan', '7896523'),
+('Fernando', '787895');
+
 insert into Carros(carroId, nombreCarro, descripcionCarro, marcaCarro, precioCarro)VALUES
 (1,'Spyder', 'deportivo de lujo','Porsche','50'),
 (2,'Ferrari Enzo', 'Un auto deportivo de altas prestaciones con motor V','Ferrari','75'),
@@ -70,6 +85,7 @@ insert into Carros(carroId, nombreCarro, descripcionCarro, marcaCarro, precioCar
 (5,'Porsche GT', 'GT Famoso por su agilidad y rendimiento en pista.','Porsche','50'),
 (6,'Audi TTS', 'Deportivo con motor central y tracción en las cuatro ruedas','Audi','36');
 
+
 call sp_ListarCarros();
 
-
+call sp_ListarUsuario();
