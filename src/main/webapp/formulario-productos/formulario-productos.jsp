@@ -39,8 +39,8 @@
             <% ArrayList<String> datosCarro = (ArrayList) request.getAttribute("datosCarro"); %>
             <% if (datosCarro != null) { %>
             <% for (String producto : datosCarro) {%>
-            <ul class="list-group list-group-horizontal-sm">
-                <li  class="list-group-item"><%= producto%></li>
+            <ul>
+                <li class="list-unstyled"><%= producto%></li>
             </ul>
             <% } %>
             <% } %>
@@ -59,22 +59,22 @@
             <form action="/SGBDConsesionariaIN5CM//carro-servlet" method="post" enctype="multipart/form-data">
                 <div class="form-floating mb-4">
                     <input class="form-control" id="nombreCarro" name="nombreCarro" type="text">
-                    <label for="nombreCarro">Nombre del Carro</label>
+                    <label for="nombreProducto">Nombre del Carro</label>
                 </div>
 
                 <div class="form-floating mt-4">
                     <textarea class="form-control" id="descripcionCarro" name="descripcionCarro" type="text"></textarea>
-                    <label for="descripcionCarro">Descripción del Carro</label>
+                    <label for="descripcionProducto">Descripción del Carro</label>
                 </div>
 
                 <div class="form-floating mt-4">
                     <input class="form-control" id="marcaCarro" name="marcaCarro" type="text">
-                    <label for="marcaCarro">Marca del Carro</label>
+                    <label for="marcaProducto">Marca del Carro</label>
                 </div>
 
                 <div class="form-floating mt-4">
                     <input class="form-control" id="precioCarro" name="precioCarro" type="text" style="color: #066699 ">
-                    <label for="precioCarro">Q.</label>
+                    <label for="precioProducto">Q.</label>
                 </div>
                 <div class="form-floating mt-5">
                     <input type="submit" value="Agregar" class="btn btn-success">

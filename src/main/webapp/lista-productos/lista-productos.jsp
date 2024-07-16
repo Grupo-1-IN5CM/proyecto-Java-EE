@@ -26,9 +26,9 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
-                                <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a>
-                                <a class="nav-link active" aria-current="page" href="./carro-servlet">Lista Carros</a>
+                                <a class="nav-link active" aria-current="page" href="../index.jsp">Inicio</a>
+                                <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario Carro</a>
+                                <a class="nav-link active" aria-current="page" href="../carro-servlet">Lista Carros</a>
                             </li>
                         </ul>
                     </div>
@@ -52,12 +52,10 @@
                     <%
                   for(Carro carro:carros){%>
                 <tr>
-                    
                     <td scope="row"><%=carro.getCarroId()%></td>
                     <td scope="row"><%=carro.getNombreCarro()%></td>
                     <td scope="row"><%=carro.getDescripcionCarro()%></td>
                     <td scope="row"><%=carro.getMarcaCarro()%></td>
-                    <td scope="row"><%=carro.getPrecioCarro()%></td>
                     <td>
                 </tr>
                     <%}   

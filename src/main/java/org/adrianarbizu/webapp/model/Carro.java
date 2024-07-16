@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Table(name = "Carro")
+@Table(name = "Carros")
 @Entity
 
 public class Carro {
@@ -17,25 +17,25 @@ public class Carro {
     private String nombreCarro;
     private String descripcionCarro;
     private String marcaCarro;
-    private Double precioCarro;
+    private Double Precio;
 
     public Carro() {
 
     }
 
-    public Carro(int carroId, String nombreCarro, String descripcionCarro, String marcaCarro, Double precioCarro) {
+    public Carro(int carroId, String nombreCarro, String descripcionCarro, String marcaCarro, Double Precio) {
         this.carroId = carroId;
         this.nombreCarro = nombreCarro;
         this.descripcionCarro = descripcionCarro;
         this.marcaCarro = marcaCarro;
-        this.precioCarro = precioCarro;
+        this.Precio = Precio;
     }
 
-    public Carro(String nombreCarro, String descripcionCarro, String marcaCarro, Double precioCarro) {
+    public Carro(String nombreCarro, String descripcionCarro, String marcaCarro, Double Precio) {
         this.nombreCarro = nombreCarro;
         this.descripcionCarro = descripcionCarro;
         this.marcaCarro = marcaCarro;
-        this.precioCarro = precioCarro;
+        this.Precio = Precio;
     }
 
     public int getCarroId() {
@@ -70,18 +70,16 @@ public class Carro {
         this.marcaCarro = marcaCarro;
     }
 
-    public Double getPrecioCarro() {
-        return precioCarro;
+    public Double getPrecio() {
+        return Precio;
     }
 
-    public void setPrecioCarro(Double precioCarro) {
-        this. precioCarro = precioCarro;
+    public void setPrecio(Double Precio) {
+        this.Precio = Precio;
     }
 
     @Override
     public String toString() {
-        return "Carro{" + "carroId=" + carroId + ", nombreCarro=" + nombreCarro + ", descripcionCarro=" + descripcionCarro + ", marcaCarro=" + marcaCarro + ", precioCarro=" + precioCarro + '}';
+        return "Carro{" + "carroId=" + carroId + ", nombreCarro=" + nombreCarro + ", descripcionCarro=" + descripcionCarro + ", marcaCarro=" + marcaCarro + ", Precio=" + Precio + '}';
     }
-    
-    
 }
