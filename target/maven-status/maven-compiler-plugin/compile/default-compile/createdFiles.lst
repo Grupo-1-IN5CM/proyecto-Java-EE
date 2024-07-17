@@ -1,6 +1,10 @@
+org\adrianarbizu\webapp\model\Compras.class
+org\adrianarbizu\webapp\model\Marcas.class
 TestJPA.class
 org\adrianarbizu\webapp\util\JpaUtil.class
 org\adrianarbizu\webapp\model\Carro.class
 org\adrianarbizu\webapp\servlet\CarroServlet.class
+org\adrianarbizu\webapp\model\Usuario.class
 org\adrianarbizu\webapp\service\ICarroService.class
+org\adrianarbizu\webapp\model\Categoria.class
 org\adrianarbizu\webapp\service\CarroService.class
