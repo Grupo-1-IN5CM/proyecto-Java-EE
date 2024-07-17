@@ -48,15 +48,13 @@
                                     <li><a class="dropdown-item" href="./compras-servlet">Lista Compras</a></li>
                                 </ul>
                             </div>
-                            
-                            
+
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-    
     <header class="bg-white text-dark text-center py-5">
         <div class="container">
             <h1 class="display-3">Bienvenido al Sistema de Gestión de Inventarios de una Consesionaria de Autos</h1>

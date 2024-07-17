@@ -7,7 +7,7 @@ import org.adrianarbizu.webapp.model.Carro;
 public interface ICarroService  {
     public List<Carro> listarCarro();
     
-    public void agregarCarro();
+    public void agregarCarro(Carro carro);
     
     public void eliminarCarro(int carroId);
     

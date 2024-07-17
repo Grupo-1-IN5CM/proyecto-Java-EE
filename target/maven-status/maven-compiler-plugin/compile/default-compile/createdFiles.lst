@@ -13,6 +13,7 @@ org\adrianarbizu\webapp\service\UsuarioService.class
 org\adrianarbizu\webapp\service\ComprasService.class
 org\adrianarbizu\webapp\service\ICategoriaService.class
 org\adrianarbizu\webapp\util\JpaUtil.class
+org\adrianarbizu\webapp\servlet\MarcaServlet.class
 org\adrianarbizu\webapp\service\CategoriaService.class
 org\adrianarbizu\webapp\servlet\CarroServlet.class
 org\adrianarbizu\webapp\model\Usuario.class

@@ -26,7 +26,7 @@ public class UsuarioService implements IUsuarioService{
     }
 
     @Override
-    public void eliminarUsuario(int carroId) {
+    public void eliminarUsuario(int usuarioId) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -41,7 +41,7 @@ public class UsuarioService implements IUsuarioService{
     }
 
     @Override
-    public Usuario buscarUsuario(int carroId) {
+    public Usuario buscarUsuario(int usuarioId) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

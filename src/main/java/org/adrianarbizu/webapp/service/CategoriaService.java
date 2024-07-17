@@ -2,6 +2,7 @@
 package org.adrianarbizu.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.adrianarbizu.webapp.model.Categoria;
 import org.adrianarbizu.webapp.util.JpaUtil;
@@ -15,8 +16,19 @@ public class CategoriaService implements ICategoriaService{
     }
 
     @Override
-    public void agregarCategoria() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void agregarCategoria(Categoria categoria) {
+        EntityTransaction transaction = em.getTransaction();
+        
+        try{
+            transaction.begin();
+            em.persist(categoria);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override

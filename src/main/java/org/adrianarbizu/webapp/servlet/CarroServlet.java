@@ -33,14 +33,24 @@ public class CarroServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> datosCarro = new ArrayList<>();
-        List<String> errores = new ArrayList<>();
-
+        
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarCarro(req, resp);
+        }
+    }
+    
+    public void agregarCarro(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String nombreCarro = req.getParameter("nombreCarro");
         String descripcionCarro = req.getParameter("descripcionCarro");
         String marcaCarro = req.getParameter("marcaCarro");
-        String precioCarro = req.getParameter("precioCarro");
-
+        Double precioCarro = Double.parseDouble(req.getParameter("precioCarro"));
+        
+        
+        
+        List<String> datosCategoria = new ArrayList<>();
+        List<String> errores = new ArrayList<>();
         if (nombreCarro == null || nombreCarro.trim().isEmpty()) {
             errores.add("El nombre del carro es obligatorio.");
         }
@@ -48,23 +58,20 @@ public class CarroServlet extends HttpServlet {
             errores.add("La descripción del carro es obligatoria.");
         }
         if (marcaCarro == null || marcaCarro.trim().isEmpty()) {
-            errores.add("La marca del carro es obligatoria.");
+            errores.add("La marca del carro es obligatorio.");
         }
-        if (precioCarro == null || precioCarro.trim().isEmpty()) {
-            errores.add("El precio del carro es obligatorio.");
-        }
-
+        
         if (errores.isEmpty()) {
-            datosCarro.add(nombreCarro);
-            datosCarro.add(descripcionCarro);
-            datosCarro.add(marcaCarro);
-            datosCarro.add("Q." + precioCarro);
+            datosCategoria.add(nombreCarro);
+            datosCategoria.add(descripcionCarro);
+            datosCategoria.add(marcaCarro);
 
-            req.setAttribute("datosCarro", datosCarro);
-            getServletContext().getRequestDispatcher("/formulario-productos/formulario-productos.jsp").forward(req, resp);
+           
+           ps.agregarCarro(new Carro(nombreCarro,descripcionCarro,marcaCarro,precioCarro));
+           resp.sendRedirect(req.getContextPath()+"/index.jsp");
         } else {
             req.setAttribute("errores", errores);
-            getServletContext().getRequestDispatcher("/formulario-productos/formulario-productos.jsp").forward(req, resp);
+            getServletContext().getRequestDispatcher("/formulario-productos/formulario-categoria.jsp").forward(req, resp);
         }
     }
 }
