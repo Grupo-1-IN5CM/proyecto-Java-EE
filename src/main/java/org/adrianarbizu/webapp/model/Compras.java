@@ -21,26 +21,26 @@ public class Compras {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int compraId;
-    private int usuarioId;
-    private int carroId;
-    private Date fechacompra;
+    private String usuario;
+    private String carro;
+    private Date fechaCompra;
     private Double total;
     
     public Compras() {
     }
 
-    public Compras(int compraId, int usuarioId, int carroId, Date fechacompra, Double total) {
+    public Compras(int compraId, String usuario, String carro, Date fechaCompra, Double total) {
         this.compraId = compraId;
-        this.usuarioId = usuarioId;
-        this.carroId = carroId;
-        this.fechacompra = fechacompra;
+        this.usuario = usuario;
+        this.carro = carro;
+        this.fechaCompra = fechaCompra;
         this.total = total;
     }
 
-    public Compras(int usuarioId, int carroId, Date fechacompra, Double total) {
-        this.usuarioId = usuarioId;
-        this.carroId = carroId;
-        this.fechacompra = fechacompra;
+    public Compras(String usuario, String carro, Date fechaCompra, Double total) {
+        this.usuario = usuario;
+        this.carro = carro;
+        this.fechaCompra = fechaCompra;
         this.total = total;
     }
 
@@ -52,28 +52,28 @@ public class Compras {
         this.compraId = compraId;
     }
 
-    public int getUsuarioId() {
-        return usuarioId;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setUsuarioId(int usuarioId) {
-        this.usuarioId = usuarioId;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
-    public int getCarroId() {
-        return carroId;
+    public String getCarro() {
+        return carro;
     }
 
-    public void setCarroId(int carroId) {
-        this.carroId = carroId;
+    public void setCarro(String carro) {
+        this.carro = carro;
     }
 
-    public Date getFechacompra() {
-        return fechacompra;
+    public Date getFechaCompra() {
+        return fechaCompra;
     }
 
-    public void setFechacompra(Date fechacompra) {
-        this.fechacompra = fechacompra;
+    public void setFechacompra(Date fechaCompra) {
+        this.fechaCompra = fechaCompra;
     }
 
     public Double getTotal() {
@@ -86,6 +86,6 @@ public class Compras {
 
     @Override
     public String toString() {
-        return "Compras{" + "compraId=" + compraId + ", usuarioId=" + usuarioId + ", carroId=" + carroId + ", fechacompra=" + fechacompra + ", total=" + total + '}';
+        return "Compras{" + "compraId=" + compraId + ", usuario=" + usuario + ", carro=" + carro + ", fechacompra=" + fechaCompra + ", total=" + total + '}';
     }
 }
