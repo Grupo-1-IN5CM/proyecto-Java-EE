@@ -60,18 +60,21 @@ public class CarroServlet extends HttpServlet {
         if (marcaCarro == null || marcaCarro.trim().isEmpty()) {
             errores.add("La marca del carro es obligatorio.");
         }
-        
+        if (precioCarro == null) {
+            errores.add("La marca del carro es obligatorio.");
+        }
         if (errores.isEmpty()) {
             datosCategoria.add(nombreCarro);
             datosCategoria.add(descripcionCarro);
             datosCategoria.add(marcaCarro);
+            datosCategoria.add(precioCarro);
 
            
            ps.agregarCarro(new Carro(nombreCarro,descripcionCarro,marcaCarro,precioCarro));
            resp.sendRedirect(req.getContextPath()+"/index.jsp");
         } else {
             req.setAttribute("errores", errores);
-            getServletContext().getRequestDispatcher("/formulario-productos/formulario-categoria.jsp").forward(req, resp);
+            getServletContext().getRequestDispatcher("/formulario-productos/formulario-productos.jsp").forward(req, resp);
         }
     }
 }
