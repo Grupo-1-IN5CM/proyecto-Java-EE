@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Table(name = "Carro")
+@Table(name = "Carros")
 @Entity
 
 public class Carro {
@@ -75,13 +75,11 @@ public class Carro {
     }
 
     public void setPrecioCarro(Double precioCarro) {
-        this. precioCarro = precioCarro;
+        this.precioCarro = precioCarro;
     }
 
     @Override
     public String toString() {
         return "Carro{" + "carroId=" + carroId + ", nombreCarro=" + nombreCarro + ", descripcionCarro=" + descripcionCarro + ", marcaCarro=" + marcaCarro + ", precioCarro=" + precioCarro + '}';
     }
-    
-    
 }

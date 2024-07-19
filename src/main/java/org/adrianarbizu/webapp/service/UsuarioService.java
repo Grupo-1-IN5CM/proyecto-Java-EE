@@ -5,6 +5,10 @@
 package org.adrianarbizu.webapp.service;
 
 import jakarta.persistence.EntityManager;
+<<<<<<< HEAD
+=======
+import jakarta.persistence.EntityTransaction;
+>>>>>>> Esteban-Cano
 import java.util.List;
 import org.adrianarbizu.webapp.model.Usuario;
 import org.adrianarbizu.webapp.util.JpaUtil;
@@ -21,12 +25,32 @@ public class UsuarioService implements IUsuarioService{
     }
     
     @Override
+<<<<<<< HEAD
     public void agregarUsuario() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void eliminarUsuario(int carroId) {
+=======
+    public void agregarUsuario(Usuario usuario) {
+        EntityTransaction transaction = em.getTransaction();
+        
+        try{
+            transaction.begin();
+            em.persist(usuario);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void eliminarUsuario(int usuarioId) {
+>>>>>>> Esteban-Cano
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -41,7 +65,11 @@ public class UsuarioService implements IUsuarioService{
     }
 
     @Override
+<<<<<<< HEAD
     public Usuario buscarUsuario(int carroId) {
+=======
+    public Usuario buscarUsuario(int usuarioId) {
+>>>>>>> Esteban-Cano
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

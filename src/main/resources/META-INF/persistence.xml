@@ -6,8 +6,14 @@
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/SGBDConsesionariaIN5CM?serverTimezone=GMT-6"/>
+<<<<<<< HEAD
             <property name= "jakarta.persistence.jdbc.user" value= "luisPerez"/>
             <property name= "jakarta.persistence.jdbc.password" value= "Luis12***"/>
+=======
+            <property name= "jakarta.persistence.jdbc.user" value= "root"/>
+            <property name= "jakarta.persistence.jdbc.password" value= "admin"/>
+            
+>>>>>>> Esteban-Cano
             <property name= "hibernate.dialect" value= "org.hibernate.dialect.MySQL8Dialect"/>
             <property name= "hibernate.hb2ddl.auto" value= "update"/>
             <property name= "hibernate.show_sql" value= "true"/>

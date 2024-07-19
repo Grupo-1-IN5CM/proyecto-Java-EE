@@ -14,7 +14,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.adrianarbizu.webapp.model.Usuario;
+<<<<<<< HEAD
 
+=======
+>>>>>>> Esteban-Cano
 import org.adrianarbizu.webapp.service.UsuarioService;
 
 /**
@@ -59,8 +62,13 @@ public class UsuarioServlet extends HttpServlet {
             datosUsuario.add(nombreUsuario);
             datosUsuario.add(contraUsuario);
 
+<<<<<<< HEAD
             req.setAttribute("datosUsuario", datosUsuario);
             getServletContext().getRequestDispatcher("/formulario-productos/formulario-usuarios.jsp").forward(req, resp);
+=======
+            ps.agregarUsuario(new Usuario(nombreUsuario,contraUsuario));
+            resp.sendRedirect(req.getContextPath()+"/index.jsp");
+>>>>>>> Esteban-Cano
         } else {
             req.setAttribute("errores", errores);
             getServletContext().getRequestDispatcher("/formulario-productos/formulario-usuarios.jsp").forward(req, resp);

@@ -28,7 +28,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
                                 <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a>
-                                <a class="nav-link active" aria-current="page" href="./carro-servlet">Lista Carros</a>
+                                <a class="nav-link active" aria-current="page" href="../carro-servlet">Lista Carros</a>
                             </li>
                         </ul>
                     </div>
@@ -48,12 +48,12 @@
                 </thead>
                 <tbody>
                 <th>
-                    <% List<Carro> carros = (List)request.getAttribute("carros");%>
+                    <% List<Usuario> usuarios = (List)request.getAttribute("usuarios");%>
                     <%
-                  for(Carro carro:carros){%>
+                  for(Usuario usuario:usuarios){%>
                 <tr>
                     
-                    <td scope="row"><%=carro.getCarroId()%></td>
+                    <td scope="row"><%=usuario.getUsuarioId()%></td>
                     <td scope="row"><%=carro.getNombreCarro()%></td>
                     <td scope="row"><%=carro.getDescripcionCarro()%></td>
                     <td scope="row"><%=carro.getMarcaCarro()%></td>
