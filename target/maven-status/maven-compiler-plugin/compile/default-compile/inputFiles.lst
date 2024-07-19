@@ -1,6 +1,16 @@
-C:\Users\Esteban\Documents\SGBDProductosIN5CM-master 6\SGBDProductosIN5CM-master 3\org.adrianarbizu.webapp_SGBDConsesionariaIN5CM_war_1.0-SNAPSHOT\src\main\java\TestJPA.java
-C:\Users\Esteban\Documents\SGBDProductosIN5CM-master 6\SGBDProductosIN5CM-master 3\org.adrianarbizu.webapp_SGBDConsesionariaIN5CM_war_1.0-SNAPSHOT\src\main\java\org\adrianarbizu\webapp\util\JpaUtil.java
-C:\Users\Esteban\Documents\SGBDProductosIN5CM-master 6\SGBDProductosIN5CM-master 3\org.adrianarbizu.webapp_SGBDConsesionariaIN5CM_war_1.0-SNAPSHOT\src\main\java\org\adrianarbizu\webapp\model\Carro.java
-C:\Users\Esteban\Documents\SGBDProductosIN5CM-master 6\SGBDProductosIN5CM-master 3\org.adrianarbizu.webapp_SGBDConsesionariaIN5CM_war_1.0-SNAPSHOT\src\main\java\org\adrianarbizu\webapp\service\CarroService.java
-C:\Users\Esteban\Documents\SGBDProductosIN5CM-master 6\SGBDProductosIN5CM-master 3\org.adrianarbizu.webapp_SGBDConsesionariaIN5CM_war_1.0-SNAPSHOT\src\main\java\org\adrianarbizu\webapp\servlet\CarroServlet.java
-C:\Users\Esteban\Documents\SGBDProductosIN5CM-master 6\SGBDProductosIN5CM-master 3\org.adrianarbizu.webapp_SGBDConsesionariaIN5CM_war_1.0-SNAPSHOT\src\main\java\org\adrianarbizu\webapp\service\ICarroService.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\IMarcaService.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Usuario.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\CarroServlet.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Categoria.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Carro.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\IUsuarioService.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\ICarroService.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\MarcaService.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Compras.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\util\JpaUtil.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Marcas.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\CarroService.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\TestJPA.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\MarcaServlet.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\UsuarioServlet.java
+C:\Users\Esteban\Desktop\Repo_Local\Nueva carpeta\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\UsuarioService.java

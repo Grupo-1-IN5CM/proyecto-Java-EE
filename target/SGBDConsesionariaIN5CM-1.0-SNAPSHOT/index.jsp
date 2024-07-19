@@ -31,7 +31,7 @@
                                 </button>
                                 <ul class="dropdown-menu ">
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Usuarios</a></li>
+                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-usuarios.jsp">Formulario Usuarios</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Marcas</a></li>
                                 </ul>
                             </div>
@@ -42,7 +42,7 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./carro-servlet">Lista Carros</a></li>
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Usuarios</a></li>
+                                    <li><a class="dropdown-item" href="./usuario-servlet">Lista Usuarios</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Marcas</a></li>
                                 </ul>
                             </div>                          

@@ -48,12 +48,12 @@
                 </thead>
                 <tbody>
                 <th>
-                    <% List<Carro> carros = (List)request.getAttribute("carros");%>
+                    <% List<Usuario> usuarios = (List)request.getAttribute("usuarios");%>
                     <%
-                  for(Carro carro:carros){%>
+                  for(Usuario usuario:usuarios){%>
                 <tr>
                     
-                    <td scope="row"><%=carro.getCarroId()%></td>
+                    <td scope="row"><%=usuario.getUsuarioId()%></td>
                     <td scope="row"><%=carro.getNombreCarro()%></td>
                     <td scope="row"><%=carro.getDescripcionCarro()%></td>
                     <td scope="row"><%=carro.getMarcaCarro()%></td>
