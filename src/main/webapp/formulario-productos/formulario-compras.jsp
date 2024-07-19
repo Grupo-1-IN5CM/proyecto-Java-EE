@@ -36,9 +36,9 @@
         </nav>
         <div class="container text-center mt-5">
             <h1>Lista de Compras</h1>
-            <% List<Compras> compras = (List<Compras>) request.getAttribute("compras"); %>
-            <% if (compras != null) { %>
-            <% for (Compras compra : compras) {%>
+            <% ArrayList<String> datosCompras = (ArrayList) request.getAttribute("compras"); %>
+            <% if (datosCompras != null) { %>
+            <% for (String compra : datosCompras) {%>
             <ul class="list-group list-group-horizontal-sm">
                 <li  class="list-group-item"><%= compra%></li>
             </ul>

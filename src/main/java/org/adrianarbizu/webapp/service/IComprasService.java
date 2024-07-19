@@ -4,7 +4,6 @@ import java.util.List;
 import org.adrianarbizu.webapp.model.Compras;
 
 public interface IComprasService {
-    
     public List<Compras> listarCompras();
     
     public void agregarCompra(Compras compra);

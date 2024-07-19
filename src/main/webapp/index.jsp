@@ -25,31 +25,8 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.jsp">Inicio</a>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Formularios
-                                </button>
-                                <ul class="dropdown-menu ">
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-usuarios.jsp">Formulario Usuarios</a></li>
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-categoria.jsp">Formulario Categorias</a></li>
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-compras.jsp">Formulario Compras</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="dropdown mt-2">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Listados
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./usuario-servlet">Lista Usuario</a></li>
-                                    <li><a class="dropdown-item" href="./carro-servlet">Lista Carros</a></li>
-                                    <li><a class="dropdown-item" href="./categoria-servlet">Lista Categirias</a></li>
-                                    <li><a class="dropdown-item" href="./compras-servlet">Lista Compras</a></li>
-                                </ul>
-                            </div>
-                            
-                            
+                            <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a>
+                            <a class="nav-link active" href="./carro-servlet">Lista Carros</a>
                         </li>
                     </ul>
                 </div>
