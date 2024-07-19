@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.List;
 import java.util.ArrayList;
 import org.adrianarbizu.webapp.model.Compras;
@@ -14,55 +15,60 @@ import org.adrianarbizu.webapp.service.ComprasService;
 @WebServlet("/compras-servlet")
 public class ComprasServerlet extends HttpServlet {
 
-    private ComprasService comprasService;
+    private ComprasService cs;
 
     @Override
     public void init() throws ServletException {
         super.init();
-        this.comprasService = new ComprasService();
+        this.cs = new ComprasService();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Compras> compras = comprasService.listarCompras();
+        List<Compras> compras = cs.listarCompras();
         req.setAttribute("compras", compras);
-        req.getRequestDispatcher("/lista-compras.jsp").forward(req, resp);
+        req.getRequestDispatcher("/lista-productos/lista-compras.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int usuarioId = Integer.parseInt(req.getParameter("usuarioId"));
-        int carroId = Integer.parseInt(req.getParameter("carroId"));
-        java.sql.Date fechacompra = java.sql.Date.valueOf(req.getParameter("fechacompra"));
-        double total = Double.parseDouble(req.getParameter("total"));
-
-        List<String> errores = validarDatos(usuarioId, carroId, fechacompra, total);
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarCompra(req, resp);
+        }   
+    }
+    
+    public void agregarCompra(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String usuarioIdParam = req.getParameter("usuarioId");
+        String carroIdParam = req.getParameter("carroId");
+        String fechacompraParam = req.getParameter("fechacompra");
+        String total = req.getParameter("total");
+        
+        
+        List<String> datosCompra = new ArrayList<>();
+        List<String> errores = new ArrayList<>();
+        
+        if (usuarioIdParam == null || usuarioIdParam.trim().isEmpty()) {
+            errores.add("El Id del Usuario es obligatorio y debe ser un número.");
+        }
+        if (carroIdParam == null || carroIdParam.trim().isEmpty()) {
+            errores.add("El Id del carro es obligatoria y debe ser un número.");
+        }
+        if (fechacompraParam == null || fechacompraParam.trim().isEmpty()) {
+            errores.add("La fecha de la compra es obligatorio.");
+        }
         if (errores.isEmpty()) {
-            Compras compra = new Compras(usuarioId, carroId, fechacompra, total);
-            comprasService.agregarCompra(compra);
-            resp.sendRedirect(req.getContextPath() + "/compras-servlet");
+            datosCompra.add(usuarioIdParam);
+            datosCompra.add(carroIdParam);
+            datosCompra.add(fechacompraParam);
+            datosCompra.add(total);
+           
+           cs.agregarCompra(new Compras(Integer.parseInt(usuarioIdParam),Integer.parseInt(carroIdParam),fechacompraParam,Double.parseDouble(total)));
+           resp.sendRedirect(req.getContextPath()+"/index.jsp");
         } else {
             req.setAttribute("errores", errores);
-            req.getRequestDispatcher("/formulario-compras.jsp").forward(req, resp);
+            getServletContext().getRequestDispatcher("/formulario-productos/formulario-compras.jsp").forward(req, resp);
         }
-    }
-
-    private List<String> validarDatos(int usuarioId, int carroId, java.sql.Date fechacompra, double total) {
-        List<String> errores = new ArrayList<>();
-   
-        if (usuarioId <= 0) {
-            errores.add("El ID de usuario no es válido.");
-        }
-        if (carroId <= 0) {
-            errores.add("El ID de carro no es válido.");
-        }
-        if (fechacompra == null) {
-            errores.add("La fecha de compra es obligatoria.");
-        }
-        if (total <= 0) {
-            errores.add("El total de la compra no es válido.");
-        }
-        
-        return errores;
     }
 }

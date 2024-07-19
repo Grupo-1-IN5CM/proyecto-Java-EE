@@ -3,16 +3,16 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+        <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lista de Compras</title>
+        <title>JSP Page</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.jsp">Sistema de gestin de compras</a>
+                <a class="navbar-brand" href="./index.jsp">Sistema de gestin de Compras</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,30 +35,28 @@
         </nav>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <div class="container mt-5">
-            <h1>Lista de Compras</h1>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Compra ID</th>
-                        <th>Usuario ID</th>
-                        <th>Carro ID</th>
+                        <th>Id de la compra</th>
+                        <th># Usuario </th>
+                        <th># Carro </th>
                         <th>Fecha de Compra</th>
                         <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% List<Compras> compras = (List<Compras>) request.getAttribute("compras"); %>
-                    <% if (compras != null) { %>
+                    <% List<Compras> compras = (List)request.getAttribute("compras"); %>
                         <% for (Compras compra : compras) { %>
                             <tr>
-                                <td><%= compra.getCompraId() %></td>
-                                <td><%= compra.getUsuarioId() %></td>
-                                <td><%= compra.getCarroId() %></td>
-                                <td><%= compra.getFechacompra() %></td>
-                                <td>Q.<%= compra.getTotal() %></td>
+                                <td scope="row"><%= compra.getCompraId()%></td>
+                                <td scope="row"><%= compra.getUsuarioId() %></td>
+                                <td scope="row"><%= compra.getCarroId() %></td>
+                                <td scope="row"><%= compra.getFechacompra() %></td>
+                                <td scope="row">Q.<%= compra.getTotal() %></td>
                             </tr>
-                        <% } %>
-                    <% } %>
+                        <%}
+                    %>
                 </tbody>
             </table>
         </div>

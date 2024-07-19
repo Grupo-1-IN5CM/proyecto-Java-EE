@@ -23,13 +23,13 @@ public class Compras {
     private int compraId;
     private int usuarioId;
     private int carroId;
-    private Date fechacompra;
+    private String fechacompra;
     private Double total;
     
     public Compras() {
     }
 
-    public Compras(int compraId, int usuarioId, int carroId, Date fechacompra, Double total) {
+    public Compras(int compraId, int usuarioId, int carroId, String fechacompra, Double total) {
         this.compraId = compraId;
         this.usuarioId = usuarioId;
         this.carroId = carroId;
@@ -37,7 +37,7 @@ public class Compras {
         this.total = total;
     }
 
-    public Compras(int usuarioId, int carroId, Date fechacompra, Double total) {
+    public Compras(int usuarioId, int carroId, String fechacompra, Double total) {
         this.usuarioId = usuarioId;
         this.carroId = carroId;
         this.fechacompra = fechacompra;
@@ -68,11 +68,11 @@ public class Compras {
         this.carroId = carroId;
     }
 
-    public Date getFechacompra() {
+    public String getFechacompra() {
         return fechacompra;
     }
 
-    public void setFechacompra(Date fechacompra) {
+    public void setFechacompra(String fechacompra) {
         this.fechacompra = fechacompra;
     }
 

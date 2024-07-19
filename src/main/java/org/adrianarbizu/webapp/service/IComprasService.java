@@ -4,14 +4,13 @@ import java.util.List;
 import org.adrianarbizu.webapp.model.Compras;
 
 public interface IComprasService {
+    public List<Compras> listarCompras();
     
-    List<Compras> listarCompras();
+    public void agregarCompra(Compras compra);
     
-    void agregarCompra(Compras compra);
+    public void eliminarCompra(int compraId);
     
-    void eliminarCompra(int compraId);
+    public Compras buscarCompraPorId(int compraId);
     
-    Compras buscarCompraPorId(int compraId);
-    
-    void editarCompra(Compras compra);
+    public void editarCompra(Compras compra);
 }
