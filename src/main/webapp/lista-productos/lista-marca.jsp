@@ -1,12 +1,12 @@
 <%@page import="java.util.List"%>
-<%@page import="org.adrianarbizu.webapp.model.Usuario"%>
+<%@page import="org.adrianarbizu.webapp.model.Marcas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Usuarios</title>
+        <title>Marcas</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     <body>
@@ -62,20 +62,20 @@
             <table class="table">
                 <thead>
                     
-                <th>  Id del Usuario</th>
+                <th>  Id del Marca</th>
                 <th>  Nombre </th>
-                <th>  Contraseña</th>
+                <th>  Descripción</th>
                 </thead>
                 <tbody>
                 <th>
-                    <% List<Usuario> usuarios = (List)request.getAttribute("usuarios");%>
+                    <% List<Marcas> marcas = (List)request.getAttribute("marcas");%>
                     <%
-                  for(Usuario usuario:usuarios){%>
+                  for(Marcas marca:marcas){%>
                 <tr>
                     
-                    <td scope="row"><%=usuario.getUsuarioId()%></td>
-                    <td scope="row"><%=usuario.getNombreUsuario()%></td>
-                    <td scope="row"><%=usuario.getContraUsuario()%></td>
+                    <td scope="row"><%=marca.getMarcaId()%></td>
+                    <td scope="row"><%=marca.getNombreMarca()%></td>
+                    <td scope="row"><%=marca.getDescripcionMarca()%></td>
                     <td>
                 </tr>
                     <%}   

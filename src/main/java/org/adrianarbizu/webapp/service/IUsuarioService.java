@@ -7,7 +7,7 @@ import org.adrianarbizu.webapp.model.Usuario;
 public interface IUsuarioService {
     public List<Usuario> listarUsuario();
     
-    public void agregarUsuario();
+    public void agregarUsuario(Usuario usuario);
     
     public void eliminarUsuario(int usuarioId);
     

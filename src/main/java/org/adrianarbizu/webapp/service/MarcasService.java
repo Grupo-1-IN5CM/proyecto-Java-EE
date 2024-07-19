@@ -1,33 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package org.adrianarbizu.webapp.service;
+
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import java.util.List;
-import org.adrianarbizu.webapp.model.Usuario;
+import org.adrianarbizu.webapp.model.Marcas;
 import org.adrianarbizu.webapp.util.JpaUtil;
 
-/**
- *
- * @author Esteban
- */
-public class UsuarioService implements IUsuarioService{
+public class MarcasService implements IMarcasService {
+
     private static EntityManager em;
 
-    public UsuarioService() {
+    
+    public MarcasService() {
+        
         this.em = JpaUtil.getEntityManager();
     }
-    
+
     @Override
-    public void agregarUsuario(Usuario usuario) {
-        EntityTransaction transaction = em.getTransaction();
+    public void agregarMarca(Marcas marca) {
+      EntityTransaction transaction = em.getTransaction();
         
         try{
             transaction.begin();
-            em.persist(usuario);
+            em.persist(marca);
             transaction.commit();
         }catch(Exception e){
             if(transaction.isActive()){
@@ -38,23 +34,24 @@ public class UsuarioService implements IUsuarioService{
     }
 
     @Override
-    public void eliminarUsuario(int usuarioId) {
+    public void eliminarMarca(int marcaId) {
+        
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void editarUsuario(Usuario usuario) {
+    public void editarMarca(Marcas marca) {
+        
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public List<Usuario> listarUsuario() {
-        return em.createQuery("SELECT u FROM Usuario u", Usuario.class).getResultList();
+    public List<Marcas> listarMarca() {
+        return em.createQuery("SELECT m FROM Marcas m", Marcas.class).getResultList();
     }
 
     @Override
-    public Usuario buscarUsuario(int usuarioId) {
+    public Marcas buscarMarcaPorId(int marcaId) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
 }

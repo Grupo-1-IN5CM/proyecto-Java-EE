@@ -7,7 +7,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulrio Compras</title>
+        <title>Formulrio Marcas</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     <body>
@@ -68,25 +68,15 @@
                 </ul>
             </div>
             <% } %>
-            <form action="<%= request.getContextPath() %>/compras-servlet" method="post">
+            <form action="<%= request.getContextPath() %>/marcas-servlet" method="post">
                 <div class="form-floating mb-4">
-                    <input class="form-control" id="usuarioId" name="usuarioId" type="number">
-                    <label for="usuarioId">ID del Usuario</label>
+                    <input class="form-control" id="nombreMarca" name="nombreMarca" type="nombreMarca">
+                    <label for="nombreMarca">Nombre de la Marca</label>
                 </div>
 
                 <div class="form-floating mb-4">
-                    <input class="form-control" id="carroId" name="carroId" type="number">
-                    <label for="carroId">ID del Carro</label>
-                </div>
-
-                <div class="form-floating mb-4">
-                    <input class="form-control" id="fechacompra" name="fechacompra" type="date">
-                    <label for="fechacompra">Fecha de Compra</label>
-                </div>
-
-                <div class="form-floating mb-4">
-                    <input class="form-control" id="total" name="total" type="number" step="0.01">
-                    <label for="total">Total (Q.)</label>
+                    <input class="form-control" id="descripcionMarca" name="descripcionMarca" type="descripcionMarca">
+                    <label for="descripcionMarca">Descripcion de la Marca</label>
                 </div>
                 
                 <div class="form-floating mb-4">
