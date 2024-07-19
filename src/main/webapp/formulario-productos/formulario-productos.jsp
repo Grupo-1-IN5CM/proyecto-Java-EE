@@ -68,10 +68,15 @@
                 </div>
 
                 <div class="form-floating mt-4">
-                    <input class="form-control" id="marcaCarro" name="marcaCarro" type="text">
-                    <label for="marcaCarro">Marca del Carro</label>
+                    <input class="form-control" id="marcaId" name="marcaId" type="text">
+                    <label for="marcaId">ID de la marca del Carro</label>
                 </div>
-
+                
+                <div class="form-floating mt-4">
+                    <input class="form-control" id="categoriaId" name="categoriaId" type="text">
+                    <label for="categoriaId">ID de la categoria del Carro</label>
+                </div>
+                
                 <div class="form-floating mt-4">
                     <input class="form-control" id="precioCarro" name="precioCarro" type="text" style="color: #066699 ">
                     <label for="precioCarroo">Q.</label>

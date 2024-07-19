@@ -1,5 +1,4 @@
 
-
 <%@page import="java.util.List"%>
 <%@page import="org.adrianarbizu.webapp.model.Carro"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -44,6 +43,7 @@
                 <th>  Nombre del Carro </th>
                 <th>  Descripcion del Carro</th>
                 <th>  Marca </th>
+                <th> Categoria </th>
                 <th> Precio </th>
                 </thead>
                 <tbody>
@@ -56,8 +56,9 @@
                     <td scope="row"><%=carro.getCarroId()%></td>
                     <td scope="row"><%=carro.getNombreCarro()%></td>
                     <td scope="row"><%=carro.getDescripcionCarro()%></td>
-                    <td scope="row"><%=carro.getMarcaCarro()%></td>
-                    <td scope="row"><%=carro.getPrecioCarro()%></td>
+                    <td scope="row"><%=carro.getMarcaId()%></td>
+                    <td scope="row"><%=carro.getCategoriaId()%></td>
+                    <td scope="row">Q.<%=carro.getPrecioCarro()%></td>
                     <td>
                 </tr>
                     <%}   

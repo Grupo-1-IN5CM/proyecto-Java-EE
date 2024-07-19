@@ -5,7 +5,12 @@ create database SGBDConsesionariaIN5CM;
 use SGBDConsesionariaIN5CM;        
 
 
-
+create table Categoria(
+	categoriaId int not null auto_increment,
+    nombreCategoria varchar(300),
+    descripcionCategoria varchar(300),
+    primary key PK_categoriaId(categoriaId)
+);
 
 create table Usuario(
 	usuarioId int not null auto_increment,
@@ -14,13 +19,6 @@ create table Usuario(
     emailUsuario varchar(50),
     fechaRegistroUsuario date,
 	primary key PK_usuarioId(usuarioId)
-);
-
-create table Categoria(
-	categoriaId int not null auto_increment,
-    nombreCategoria varchar(300),
-    descripcionCategoria varchar(300),
-    primary key PK_categoriaId(categoriaId)
 );
 
 create table Marcas(
@@ -34,38 +32,28 @@ create table Carros(
 	carroId int not null auto_increment,
     nombreCarro varchar(30),
     descripcionCarro varchar(300),
-    marcaCarro varchar(30),
+    marcaId int,
+    categoriaId int,
     precioCarro decimal(10,2),
-	primary key PK_carroId(carroId)
+	primary key PK_carroId(carroId),
+    CONSTRAINT FK_Carros_Marcas FOREIGN KEY Carros(marcaId)
+	REFERENCES Marcas(marcaId),
+    CONSTRAINT FK_Carros_Categoria FOREIGN KEY Carros(categoriaId)
+	REFERENCES Categoria(categoriaId)
 );
 
 create table Compras(
 	compraId int not null auto_increment,
-    usuario varchar(30),
-    carro varchar(30),
-    fechacompra date,
+    usuarioId int,
+    carroId int,
+    fechacompra varchar(60),
     total decimal(10,2),
-    primary key compraId(compraId)
+    primary key compraId(compraId),
+    CONSTRAINT FK_Compras_Carros FOREIGN KEY Compras(carroId)
+	REFERENCES Carros(carroId),
+    CONSTRAINT FK_Compras_Usuario FOREIGN KEY Compras(usuarioId)
+	REFERENCES Usuario(usuarioId)
 );
-
-
--- LISTAR 
-Delimiter $$
-	Create procedure sp_ListarUsuario()
-		Begin
-			Select * from Usuario;
-        End$$
-Delimiter ;
-
-INSERT INTO Usuario(usuarioId, nombreUsuario, emailUsuario, contraUsuario, fechaRegistroUsuario) VALUES
-(1, 'Juan Perez', 'juan.perez@example.com', 'password123', '2023-01-15'),
-(2, 'Maria Lopez', 'maria.lopez@example.com', 'password456', '2023-02-20'),
-(3, 'Carlos Garcia', 'carlos.garcia@example.com', 'password789', '2023-03-25'),
-(4, 'Ana Martinez', 'ana.martinez@example.com', 'password012', '2023-04-30'),
-(5, 'Luis Fernandez', 'luis.fernandez@example.com', 'password345', '2023-05-05'),
-(6, 'Elena Sanchez', 'elena.sanchez@example.com', 'password678', '2023-06-10');
-
-call sp_ListarUsuario();
 
 
 -- LISTAR 
@@ -88,26 +76,22 @@ call sp_ListarCategoria();
 
 -- LISTAR 
 Delimiter $$
-	Create procedure sp_ListarCarros()
+	Create procedure sp_ListarUsuario()
 		Begin
-			Select * from Carros;
+			Select * from Usuario;
         End$$
 Delimiter ;
 
+INSERT INTO Usuario(usuarioId, nombreUsuario, emailUsuario, contraUsuario, fechaRegistroUsuario) VALUES
+(1, 'Juan Perez', 'juanPerez@gmail.com', 'password123', '2023-01-15'),
+(2, 'Maria Lopez', 'maria.lopez@Outlock.com', 'password456', '2023-02-20'),
+(3, 'Carlos Garcia', 'carlosGarcia@hotmail.com', 'password789', '2023-03-25'),
+(4, 'Ana Martinez', 'ana-Martinez@gmail.com', 'password012', '2023-04-30'),
+(5, 'Luis Fernandez', 'luisFernandez@gmail.com', 'password345', '2023-05-05'),
+(6, 'Elena Sanchez', 'elenaSanchez@hotmail.com', 'password678', '2023-06-10');
 
+call sp_ListarUsuario();
 
-
-
-INSERT INTO carros(carroId, nombreCarro, descripcionCarro, marcaCarro, precioCarro) VALUES
-(1, 'Bugatti Veyron', 'Uno de los autos más rápidos del mundo W16', 'Bugatti', 150),
-(2, 'Aston Martin Valkyrie', 'Auto deportivo híbrido con tecnología de F1', 'Aston Martin', 200),
-(3, 'Chevrolet Corvette ZR1', 'Potente auto deportivo americano con motor V8 sobrealimentado', 'Chevrolet', 130),
-(4, 'Ford GT', 'Inspirado en los autos de carrera, con un motor V6 biturbo', 'Ford', 140),
-(5, 'Nissan GT-R', 'Conocido como "Godzilla" por su gran rendimiento y tecnología', 'Nissan', 120),
-(6, 'Mercedes-AMG GT', 'Elegante deportivo con motor V8 biturbo y diseño aerodinámico', 'Mercedes', 160);
-
-
-call sp_ListarCarros();
 
 -- LISTAR 
 Delimiter $$
@@ -122,14 +106,40 @@ Delimiter ;
 
 insert into Marcas(marcaId, nombreMarca, descripcionMarca)VALUES
 
-(1,'Bugatti Veyron', 'Uno de los autos más rápidos del mundo W16'),
-(2,'Aston Martin Valkyrie', 'Auto deportivo híbrido con tecnología de F1'),
-(3,'Chevrolet Corvette ZR1', 'Potente auto deportivo americano con motor V8 sobrealimentado'),
-(4,'Ford GT', 'Inspirado en los autos de carrera, con un motor V6 biturbo'),
-(5,'Nissan GT-R', 'Conocido como "Godzilla" por su gran rendimiento y tecnología'),
-(6,'Mercedes-AMG GT', 'Elegante deportivo con motor V8 biturbo y diseño aerodinámico');
+(1,'Bugatti', 'es un fabricante de automóviles superdeportivos y de carreras con sede en Molsheim'),
+(2,'Aston Martin', 'es una firma fundada en 1913 y que está especializada en vehículos de lujo y deportivos de altas prestaciones'),
+(3,'Chevrolet ', 'es un fabricante estadounidense de automóviles y camiones con sede en Detroit'),
+(4,'Ford', 'es una organización multinacional fundada en Estados Unidos la cual se dedica a la construcción de automóviles con base en Michigan, Estados Unidos.'),
+(5,'Nissan', 'es un fabricante japonés de automóviles, con base en Nishi-ku (Yokohama).'),
+(6,'Mercedes', 'es una empresa alemana fabricante de vehículos, subsidiaria de la compañía Mercedes-Benz Group.');
 
 call sp_ListarMarcas();
+
+
+-- LISTAR 
+Delimiter $$
+	Create procedure sp_ListarCarros()
+		Begin
+			Select * from Carros;
+        End$$
+Delimiter ;
+
+
+
+
+
+INSERT INTO carros(carroId, nombreCarro, descripcionCarro, marcaId, categoriaId, precioCarro) VALUES
+(1, 'Bugatti Veyron', 'Uno de los autos más rápidos del mundo W16', 1,1, 150),
+(2, 'Aston Martin Valkyrie', 'Auto deportivo híbrido con tecnología de F1', 2, 2, 200),
+(3, 'Chevrolet Corvette ZR1', 'Potente auto deportivo americano con motor V8 sobrealimentado', 3, 3, 130),
+(4, 'Ford GT', 'Inspirado en los autos de carrera, con un motor V6 biturbo', 4, 4, 140),
+(5, 'Nissan GT-R', 'Conocido como "Godzilla" por su gran rendimiento y tecnología', 5,5, 120),
+(6, 'Mercedes-AMG GT', 'Elegante deportivo con motor V8 biturbo y diseño aerodinámico', 6,6, 160);
+
+
+call sp_ListarCarros();
+
+
 
 
 
@@ -142,13 +152,13 @@ Delimiter $$
 Delimiter ;
 
 
-INSERT INTO Compras(compraId, usuario, carro, fechacompra, total) VALUES
-(1, 'Juan Perez', 'Bugatti Veyron', '2023-06-10', 150),
-(2, 'Maria Lopez', 'Aston Martin Valkyrie', '2023-07-15', 200),
-(3, 'Carlos Garcia', 'Chevrolet Corvette ZR1', '2023-08-20', 130),
-(4, 'Ana Martinez', 'Ford GT', '2023-09-25', 140),
-(5, 'Luis Fernandez', 'Nissan GT-R', '2023-10-30', 120),
-(6, 'Elena Sanchez', 'Mercedes-AMG GT', '2023-11-05', 160);
+INSERT INTO Compras(compraId, usuarioId, carroId, fechacompra, total) VALUES
+(1, 1, 1, '2023-06-10', 150),
+(2, 2, 2, '2023-07-15', 200),
+(3, 3, 3, '2023-08-20', 130),
+(4, 4, 4, '2023-09-25', 140),
+(5, 5, 5, '2023-10-30', 120),
+(6, 6, 6, '2023-11-05', 160);
 
 
 

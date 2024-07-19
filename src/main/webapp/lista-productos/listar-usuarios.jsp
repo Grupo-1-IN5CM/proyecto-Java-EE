@@ -1,9 +1,5 @@
-<%-- 
-    Document   : listar-usuarios
-    Created on : 16 jul. 2024, 17:33:52
-    Author     : ecanoooooooooooooooooooooooo
---%>
-
+<%@page import="java.util.List"%>
+<%@page import="org.adrianarbizu.webapp.model.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
