@@ -7,6 +7,7 @@
     <title>Sistema de Gestión de Inventarios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </head>
 
 <body>    
@@ -30,20 +31,11 @@
                                     Formularios
                                 </button>
                                 <ul class="dropdown-menu ">
-<<<<<<< HEAD
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-usuarios.jsp">Formulario Usuarios</a></li>
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Marcas</a></li>
-=======
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-usuarios.jsp">Formulario Usuarios</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-categoria.jsp">Formulario Categorias</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-compras.jsp">Formulario Compras</a></li>
-<<<<<<< HEAD
->>>>>>> Adrian-Arbizu
-=======
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-marca.jsp">Formulario Marcas</a></li>
->>>>>>> Giovanni-Carrera
                                 </ul>
                             </div>
                             
@@ -52,13 +44,6 @@
                                     Listados
                                 </button>
                                 <ul class="dropdown-menu">
-<<<<<<< HEAD
-                                    <li><a class="dropdown-item" href="./carro-servlet">Lista Carros</a></li>
-                                    <li><a class="dropdown-item" href="./usuario-servlet">Lista Usuarios</a></li>
-                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Marcas</a></li>
-                                </ul>
-                            </div>                          
-=======
                                     <li><a class="dropdown-item" href="./usuario-servlet">Lista Usuario</a></li>
                                     <li><a class="dropdown-item" href="./carro-servlet">Lista Carros</a></li>
                                     <li><a class="dropdown-item" href="./categoria-servlet">Lista Categirias</a></li>
@@ -67,10 +52,6 @@
                                 </ul>
                             </div>
 
-<<<<<<< HEAD
->>>>>>> Adrian-Arbizu
-=======
->>>>>>> Giovanni-Carrera
                         </li>
                     </ul>
                 </div>

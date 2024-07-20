@@ -4,13 +4,6 @@ import java.util.List;
 import org.adrianarbizu.webapp.model.Compras;
 
 public interface IComprasService {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> Adrian-Arbizu
-=======
->>>>>>> Giovanni-Carrera
     public List<Compras> listarCompras();
     
     public void agregarCompra(Compras compra);

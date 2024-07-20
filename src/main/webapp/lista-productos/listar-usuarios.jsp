@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Adrian-Arbizu
-<%-- 
-    Document   : listar-usuarios
-    Created on : 16 jul. 2024, 17:33:52
-    Author     : Esteban
---%>
-
-<<<<<<< HEAD
-=======
 <%@page import="java.util.List"%>
 <%@page import="org.adrianarbizu.webapp.model.Usuario"%>
->>>>>>> Esteban-Cano
-=======
->>>>>>> Adrian-Arbizu
-=======
-<%@page import="java.util.List"%>
-<%@page import="org.adrianarbizu.webapp.model.Usuario"%>
->>>>>>> Giovanni-Carrera
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -30,52 +10,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href=".index.jsp">Sistema de gestion de carros</a>
-=======
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Sistema de Gestión de Marcas</a>
->>>>>>> Esteban-Cano
-=======
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href=".index.jsp">Sistema de gestion de carros</a>
->>>>>>> Adrian-Arbizu
-=======
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Sistema de Gestión de Marcas</a>
->>>>>>> Giovanni-Carrera
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Adrian-Arbizu
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-=======
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sistema de Gestión de Marcas</h5>
->>>>>>> Giovanni-Carrera
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div  class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
-<<<<<<< HEAD
-                                <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a>
-                                <a class="nav-link active" aria-current="page" href="../carro-servlet">Lista Carros</a>
-<<<<<<< HEAD
-=======
                         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sistema de Gestión de Marcas</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -83,8 +25,6 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
-=======
->>>>>>> Giovanni-Carrera
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Formularios
@@ -111,12 +51,6 @@
                                     </ul>
                                 </div>
 
-<<<<<<< HEAD
->>>>>>> Esteban-Cano
-=======
->>>>>>> Adrian-Arbizu
-=======
->>>>>>> Giovanni-Carrera
                             </li>
                         </ul>
                     </div>
@@ -151,16 +85,4 @@
             </table>   
         </div>
     </body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> Esteban-Cano
-=======
-</html>
->>>>>>> Adrian-Arbizu
-=======
-</html>
->>>>>>> Giovanni-Carrera

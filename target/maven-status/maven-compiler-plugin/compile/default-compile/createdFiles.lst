@@ -1,20 +1,20 @@
 org\adrianarbizu\webapp\model\Marcas.class
-org\adrianarbizu\webapp\service\MarcaService.class
 TestJPA.class
 org\adrianarbizu\webapp\model\Carro.class
 org\adrianarbizu\webapp\servlet\UsuarioServlet.class
 org\adrianarbizu\webapp\service\ICarroService.class
+org\adrianarbizu\webapp\servlet\CategoriaServlet.class
 org\adrianarbizu\webapp\model\Categoria.class
+org\adrianarbizu\webapp\service\IComprasService.class
+org\adrianarbizu\webapp\servlet\ComprasServerlet.class
 org\adrianarbizu\webapp\service\CarroService.class
 org\adrianarbizu\webapp\model\Compras.class
 org\adrianarbizu\webapp\service\UsuarioService.class
-org\adrianarbizu\webapp\service\IMarcaService.class
+org\adrianarbizu\webapp\service\ComprasService.class
+org\adrianarbizu\webapp\service\ICategoriaService.class
 org\adrianarbizu\webapp\util\JpaUtil.class
 org\adrianarbizu\webapp\servlet\MarcaServlet.class
-<<<<<<< HEAD
-=======
 org\adrianarbizu\webapp\service\CategoriaService.class
->>>>>>> Giovanni-Carrera
 org\adrianarbizu\webapp\servlet\CarroServlet.class
 org\adrianarbizu\webapp\model\Usuario.class
 org\adrianarbizu\webapp\service\IUsuarioService.class

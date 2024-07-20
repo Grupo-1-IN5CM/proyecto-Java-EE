@@ -26,13 +26,6 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a>
-                                <a class="nav-link active" aria-current="page" href="../carro-servlet">Lista Carros</a>
-=======
-=======
->>>>>>> Giovanni-Carrera
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Formularios
@@ -42,11 +35,7 @@
                                         <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
                                         <li><a class="dropdown-item" href="./formulario-productos/formulario-categoria.jsp">Formulario Categorias</a></li>
                                         <li><a class="dropdown-item" href="./formulario-productos/formulario-compras.jsp">Formulario Compras</a></li>
-<<<<<<< HEAD
-                                        <li><a class="dropdown-item" href="./formulario-productos/formulario-compras.jsp">Formulario Marcas</a></li>
-=======
                                         <li><a class="dropdown-item" href="./formulario-productos/formulario-marca.jsp">Formulario Marcas</a></li>
->>>>>>> Giovanni-Carrera
                                     </ul>
                                 </div>
 
@@ -63,10 +52,6 @@
                                     </ul>
                                 </div>
 
-<<<<<<< HEAD
->>>>>>> Adrian-Arbizu
-=======
->>>>>>> Giovanni-Carrera
                             </li>
                         </ul>
                     </div>
@@ -87,12 +72,12 @@
                 </thead>
                 <tbody>
                 <th>
-                    <% List<Usuario> usuarios = (List)request.getAttribute("usuarios");%>
+                    <% List<Carro> carros = (List)request.getAttribute("carros");%>
                     <%
-                  for(Usuario usuario:usuarios){%>
+                  for(Carro carro:carros){%>
                 <tr>
                     
-                    <td scope="row"><%=usuario.getUsuarioId()%></td>
+                    <td scope="row"><%=carro.getCarroId()%></td>
                     <td scope="row"><%=carro.getNombreCarro()%></td>
                     <td scope="row"><%=carro.getDescripcionCarro()%></td>
                     <td scope="row"><%=carro.getMarcaId()%></td>

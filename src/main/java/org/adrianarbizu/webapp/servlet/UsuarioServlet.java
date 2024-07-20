@@ -14,17 +14,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.adrianarbizu.webapp.model.Usuario;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> Esteban-Cano
-=======
-
->>>>>>> Adrian-Arbizu
-=======
->>>>>>> Giovanni-Carrera
 import org.adrianarbizu.webapp.service.UsuarioService;
 
 /**
@@ -69,23 +58,8 @@ public class UsuarioServlet extends HttpServlet {
             datosUsuario.add(nombreUsuario);
             datosUsuario.add(contraUsuario);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            req.setAttribute("datosUsuario", datosUsuario);
-            getServletContext().getRequestDispatcher("/formulario-productos/formulario-usuarios.jsp").forward(req, resp);
-=======
             ps.agregarUsuario(new Usuario(nombreUsuario,contraUsuario));
             resp.sendRedirect(req.getContextPath()+"/index.jsp");
->>>>>>> Esteban-Cano
-=======
-            req.setAttribute("datosUsuario", datosUsuario);
-            getServletContext().getRequestDispatcher("/formulario-productos/formulario-usuarios.jsp").forward(req, resp);
->>>>>>> Adrian-Arbizu
-=======
-            ps.agregarUsuario(new Usuario(nombreUsuario,contraUsuario));
-            resp.sendRedirect(req.getContextPath()+"/index.jsp");
->>>>>>> Giovanni-Carrera
         } else {
             req.setAttribute("errores", errores);
             getServletContext().getRequestDispatcher("/formulario-productos/formulario-usuarios.jsp").forward(req, resp);

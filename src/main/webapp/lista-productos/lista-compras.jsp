@@ -12,15 +12,7 @@
     <body>
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <a class="navbar-brand" href="./index.jsp">Sistema de gestin de Compras</a>
-=======
-                <a class="navbar-brand" href="./index.jsp">Sistema de gestin de compras</a>
->>>>>>> Adrian-Arbizu
-=======
                 <a class="navbar-brand" href="#">Sistema de Gestión de Marcas</a>
->>>>>>> Giovanni-Carrera
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -67,36 +59,17 @@
         </nav>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <div class="container mt-5">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <h1>Lista de Compras</h1>
->>>>>>> Adrian-Arbizu
-=======
->>>>>>> Giovanni-Carrera
             <table class="table">
                 <thead>
                     <tr>
                         <th>Id de la compra</th>
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <th># Usuario </th>
                         <th># Carro </th>
-=======
-                        <th>Usuario </th>
-                        <th>Carro </th>
->>>>>>> Adrian-Arbizu
-=======
-                        <th># Usuario </th>
-                        <th># Carro </th>
->>>>>>> Giovanni-Carrera
                         <th>Fecha de Compra</th>
                         <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <% List<Compras> compras = (List)request.getAttribute("compras"); %>
                         <% for (Compras compra : compras) { %>
                             <tr>
@@ -107,25 +80,6 @@
                                 <td scope="row">Q.<%= compra.getTotal() %></td>
                             </tr>
                         <%}
-=======
-                    <% List<Compras> compras = (List<Compras>) request.getAttribute("compras"); %>
-=======
-                    <% List<Compras> compras = (List)request.getAttribute("compras"); %>
->>>>>>> Giovanni-Carrera
-                        <% for (Compras compra : compras) { %>
-                            <tr>
-                                <td scope="row"><%= compra.getCompraId()%></td>
-                                <td scope="row"><%= compra.getUsuarioId() %></td>
-                                <td scope="row"><%= compra.getCarroId() %></td>
-                                <td scope="row"><%= compra.getFechacompra() %></td>
-                                <td scope="row">Q.<%= compra.getTotal() %></td>
-                            </tr>
-<<<<<<< HEAD
-                        <%
->>>>>>> Adrian-Arbizu
-=======
-                        <%}
->>>>>>> Giovanni-Carrera
                     %>
                 </tbody>
             </table>

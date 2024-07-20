@@ -57,26 +57,6 @@
                 </div>
             </div>
         </nav>
-<<<<<<< HEAD
-        <div class="container text-center mt-5">
-            <h1>Lista de Compras</h1>
-<<<<<<< HEAD
-            <% ArrayList<String> datosCompras = (ArrayList) request.getAttribute("compras"); %>
-            <% if (datosCompras != null) { %>
-            <% for (String compra : datosCompras) {%>
-=======
-            <% List<Compras> compras = (List<Compras>) request.getAttribute("compras"); %>
-            <% if (compras != null) { %>
-            <% for (Compras compra : compras) {%>
->>>>>>> Adrian-Arbizu
-            <ul class="list-group list-group-horizontal-sm">
-                <li  class="list-group-item"><%= compra%></li>
-            </ul>
-            <% } %>
-            <% } %>
-        </div>
-=======
->>>>>>> Giovanni-Carrera
         <div class="container mt-5">
             <% List<String> errores = (List<String>) request.getAttribute("errores"); %>
             <% if (errores != null && !errores.isEmpty()) { %>
