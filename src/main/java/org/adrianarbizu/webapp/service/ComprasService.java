@@ -1,7 +1,10 @@
 
 package org.adrianarbizu.webapp.service;
 import jakarta.persistence.EntityManager;
+<<<<<<< HEAD
 import jakarta.persistence.EntityTransaction;
+=======
+>>>>>>> Adrian-Arbizu
 import java.util.List;
 import org.adrianarbizu.webapp.model.Compras;
 import org.adrianarbizu.webapp.util.JpaUtil;
@@ -17,6 +20,7 @@ public class ComprasService implements IComprasService {
 
     @Override
     public void agregarCompra(Compras compra) {
+<<<<<<< HEAD
         EntityTransaction transaction = em.getTransaction();
         
         try{
@@ -29,6 +33,9 @@ public class ComprasService implements IComprasService {
             }
             e.printStackTrace();
         }
+=======
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+>>>>>>> Adrian-Arbizu
     }
 
     @Override

@@ -16,25 +16,28 @@ public class Carro {
     private int carroId;
     private String nombreCarro;
     private String descripcionCarro;
-    private String marcaCarro;
+    private int marcaId;
+    private int categoriaId;
     private Double precioCarro;
 
     public Carro() {
 
     }
 
-    public Carro(int carroId, String nombreCarro, String descripcionCarro, String marcaCarro, Double precioCarro) {
+    public Carro(int carroId, String nombreCarro, String descripcionCarro, int marcaId, int categoriaId, Double precioCarro) {
         this.carroId = carroId;
         this.nombreCarro = nombreCarro;
         this.descripcionCarro = descripcionCarro;
-        this.marcaCarro = marcaCarro;
+        this.marcaId = marcaId;
+        this.categoriaId = categoriaId;
         this.precioCarro = precioCarro;
     }
 
-    public Carro(String nombreCarro, String descripcionCarro, String marcaCarro, Double precioCarro) {
+    public Carro(String nombreCarro, String descripcionCarro, int marcaId, int categoriaId, Double precioCarro) {
         this.nombreCarro = nombreCarro;
         this.descripcionCarro = descripcionCarro;
-        this.marcaCarro = marcaCarro;
+        this.marcaId = marcaId;
+        this.categoriaId = categoriaId;
         this.precioCarro = precioCarro;
     }
 
@@ -62,12 +65,20 @@ public class Carro {
         this.descripcionCarro = descripcionCarro;
     }
 
-    public String getMarcaCarro() {
-        return marcaCarro;
+    public int getMarcaId() {
+        return marcaId;
     }
 
-    public void setMarcaCarro(String marcaCarro) {
-        this.marcaCarro = marcaCarro;
+    public void setMarcaId(int marcaId) {
+        this.marcaId = marcaId;
+    }
+
+    public int getCategoriaId() {
+        return categoriaId;
+    }
+
+    public void setCategoriaId(int categoriaId) {
+        this.categoriaId = categoriaId;
     }
 
     public Double getPrecioCarro() {
@@ -80,6 +91,6 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "Carro{" + "carroId=" + carroId + ", nombreCarro=" + nombreCarro + ", descripcionCarro=" + descripcionCarro + ", marcaCarro=" + marcaCarro + ", precioCarro=" + precioCarro + '}';
+        return "Carro{" + "carroId=" + carroId + ", nombreCarro=" + nombreCarro + ", descripcionCarro=" + descripcionCarro + ", marcaId=" + marcaId + ", categoriaId=" + categoriaId + ", precioCarro=" + precioCarro + '}';
     }
 }

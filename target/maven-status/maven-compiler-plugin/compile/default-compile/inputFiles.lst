@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\IMarcaService.java
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Marcas.java
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Carro.java
@@ -14,3 +15,11 @@ C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adria
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\MarcaServlet.java
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Categoria.java
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\TestJPA.java
+=======
+C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\src\main\java\org\adrianarbizu\webapp\util\JpaUtil.java
+C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\src\main\java\org\adrianarbizu\webapp\service\ICarroService.java
+C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\src\main\java\TestJPA.java
+C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\src\main\java\org\adrianarbizu\webapp\servlet\CarroServlet.java
+C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\src\main\java\org\adrianarbizu\webapp\model\Carro.java
+C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\src\main\java\org\adrianarbizu\webapp\service\CarroService.java
+>>>>>>> Adrian-Arbizu

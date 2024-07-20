@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Adrian-Arbizu
 <%-- 
     Document   : listar-usuarios
     Created on : 16 jul. 2024, 17:33:52
     Author     : Esteban
 --%>
 
+<<<<<<< HEAD
 =======
 <%@page import="java.util.List"%>
 <%@page import="org.adrianarbizu.webapp.model.Usuario"%>
 >>>>>>> Esteban-Cano
+=======
+>>>>>>> Adrian-Arbizu
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,6 +26,7 @@
     </head>
     <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href=".index.jsp">Sistema de gestion de carros</a>
@@ -28,12 +35,20 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Sistema de Gestión de Marcas</a>
 >>>>>>> Esteban-Cano
+=======
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=".index.jsp">Sistema de gestion de carros</a>
+>>>>>>> Adrian-Arbizu
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Adrian-Arbizu
                         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -43,6 +58,7 @@
                                 <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
                                 <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a>
                                 <a class="nav-link active" aria-current="page" href="../carro-servlet">Lista Carros</a>
+<<<<<<< HEAD
 =======
                         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sistema de Gestión de Marcas</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -78,6 +94,8 @@
                                 </div>
 
 >>>>>>> Esteban-Cano
+=======
+>>>>>>> Adrian-Arbizu
                             </li>
                         </ul>
                     </div>
@@ -113,7 +131,11 @@
         </div>
     </body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>
 =======
 </html>
 >>>>>>> Esteban-Cano
+=======
+</html>
+>>>>>>> Adrian-Arbizu

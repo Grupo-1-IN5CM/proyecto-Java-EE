@@ -30,9 +30,16 @@
                                     Formularios
                                 </button>
                                 <ul class="dropdown-menu ">
+<<<<<<< HEAD
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-usuarios.jsp">Formulario Usuarios</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Marcas</a></li>
+=======
+                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-usuarios.jsp">Formulario Usuarios</a></li>
+                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
+                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-categoria.jsp">Formulario Categorias</a></li>
+                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-compras.jsp">Formulario Compras</a></li>
+>>>>>>> Adrian-Arbizu
                                 </ul>
                             </div>
                             
@@ -41,18 +48,27 @@
                                     Listados
                                 </button>
                                 <ul class="dropdown-menu">
+<<<<<<< HEAD
                                     <li><a class="dropdown-item" href="./carro-servlet">Lista Carros</a></li>
                                     <li><a class="dropdown-item" href="./usuario-servlet">Lista Usuarios</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Marcas</a></li>
                                 </ul>
                             </div>                          
+=======
+                                    <li><a class="dropdown-item" href="./usuario-servlet">Lista Usuario</a></li>
+                                    <li><a class="dropdown-item" href="./carro-servlet">Lista Carros</a></li>
+                                    <li><a class="dropdown-item" href="./categoria-servlet">Lista Categirias</a></li>
+                                    <li><a class="dropdown-item" href="./compras-servlet">Lista Compras</a></li>
+                                </ul>
+                            </div>
+
+>>>>>>> Adrian-Arbizu
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-    
     <header class="bg-white text-dark text-center py-5">
         <div class="container">
             <h1 class="display-3">Bienvenido al Sistema de Gestión de Inventarios de una Consesionaria de Autos</h1>
