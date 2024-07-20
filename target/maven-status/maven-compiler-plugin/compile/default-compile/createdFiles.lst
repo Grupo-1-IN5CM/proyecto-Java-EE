@@ -11,6 +11,10 @@ org\adrianarbizu\webapp\service\UsuarioService.class
 org\adrianarbizu\webapp\service\IMarcaService.class
 org\adrianarbizu\webapp\util\JpaUtil.class
 org\adrianarbizu\webapp\servlet\MarcaServlet.class
+<<<<<<< HEAD
+=======
+org\adrianarbizu\webapp\service\CategoriaService.class
+>>>>>>> Giovanni-Carrera
 org\adrianarbizu\webapp\servlet\CarroServlet.class
 org\adrianarbizu\webapp\model\Usuario.class
 org\adrianarbizu\webapp\service\IUsuarioService.class

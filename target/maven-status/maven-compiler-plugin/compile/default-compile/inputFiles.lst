@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\IMarcaService.java
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Marcas.java
 C:\Users\Esteban\Desktop\Repo_Local\Soy\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Carro.java
@@ -23,3 +24,25 @@ C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Gio
 C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\src\main\java\org\adrianarbizu\webapp\model\Carro.java
 C:\Users\Adrian\Downloads\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\proyecto-Java-EE-Giovanni-Carrera\src\main\java\org\adrianarbizu\webapp\service\CarroService.java
 >>>>>>> Adrian-Arbizu
+=======
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\IComprasService.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Carro.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\CategoriaServlet.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\ICarroService.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\ComprasService.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\CarroService.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\MarcaServlet.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Categoria.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\util\JpaUtil.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\UsuarioService.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\UsuarioServlet.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Marcas.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\ICategoriaService.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\IUsuarioService.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\TestJPA.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\CarroServlet.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Usuario.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\service\CategoriaService.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\model\Compras.java
+C:\Users\Dell G7\Desktop\Nueva carpeta (5)\proyecto-Java-EE\src\main\java\org\adrianarbizu\webapp\servlet\ComprasServerlet.java
+>>>>>>> Giovanni-Carrera

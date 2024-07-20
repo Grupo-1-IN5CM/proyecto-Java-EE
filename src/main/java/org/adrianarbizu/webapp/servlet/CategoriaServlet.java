@@ -25,7 +25,7 @@ public class CategoriaServlet extends HttpServlet {
         super.init();
         this.ps = new CategoriaService();
     }
-
+    //lista, buscar
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Categoria> categorias = ps.listarCategoria();
@@ -33,27 +33,36 @@ public class CategoriaServlet extends HttpServlet {
         req.getRequestDispatcher("/lista-productos/lista-categoria.jsp").forward(req, resp);
     }
 
+    // Agregar, eliminar, editar
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> datosCategoria = new ArrayList<>();
-        List<String> errores = new ArrayList<>();
-
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarCategoria(req, resp);
+        }   
+    }
+    
+    public void agregarCategoria(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String nombreCategoria = req.getParameter("nombreCategoria");
         String descripcionCategoria = req.getParameter("descripcionCategoria");
-
+        
+        
+        
+        List<String> datosCategoria = new ArrayList<>();
+        List<String> errores = new ArrayList<>();
         if (nombreCategoria == null || nombreCategoria.trim().isEmpty()) {
             errores.add("El nombre del categoria es obligatorio.");
         }
         if (descripcionCategoria == null || descripcionCategoria.trim().isEmpty()) {
             errores.add("La descripción de la categoria es obligatoria.");
         }
-       
         if (errores.isEmpty()) {
             datosCategoria.add(nombreCategoria);
             datosCategoria.add(descripcionCategoria);
            
-            req.setAttribute("datosCarro", datosCategoria);
-            getServletContext().getRequestDispatcher("/formulario-productos/formulario-categoria.jsp").forward(req, resp);
+           ps.agregarCategoria(new Categoria(nombreCategoria,descripcionCategoria));
+           resp.sendRedirect(req.getContextPath()+"/index.jsp");
         } else {
             req.setAttribute("errores", errores);
             getServletContext().getRequestDispatcher("/formulario-productos/formulario-categoria.jsp").forward(req, resp);

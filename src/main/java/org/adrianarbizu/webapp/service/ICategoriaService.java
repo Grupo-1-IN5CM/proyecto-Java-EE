@@ -7,7 +7,7 @@ import org.adrianarbizu.webapp.model.Categoria;
 public interface ICategoriaService {
    public List<Categoria> listarCategoria();
     
-    public void agregarCategoria();
+    public void agregarCategoria(Categoria categoria);
     
     public void eliminarCategoria(int categoriaId);
     

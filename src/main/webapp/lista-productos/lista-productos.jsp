@@ -13,13 +13,13 @@
     <body>
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Sistema de Gestión de Inventarios</a>
+                <a class="navbar-brand" href="#">Sistema de Gestión de Marcas</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sistema de Gestión de Inventarios</h5>
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sistema de Gestión de Marcas</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div  class="offcanvas-body">
@@ -27,9 +27,12 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a>
                                 <a class="nav-link active" aria-current="page" href="../carro-servlet">Lista Carros</a>
 =======
+=======
+>>>>>>> Giovanni-Carrera
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Formularios
@@ -39,7 +42,11 @@
                                         <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
                                         <li><a class="dropdown-item" href="./formulario-productos/formulario-categoria.jsp">Formulario Categorias</a></li>
                                         <li><a class="dropdown-item" href="./formulario-productos/formulario-compras.jsp">Formulario Compras</a></li>
+<<<<<<< HEAD
                                         <li><a class="dropdown-item" href="./formulario-productos/formulario-compras.jsp">Formulario Marcas</a></li>
+=======
+                                        <li><a class="dropdown-item" href="./formulario-productos/formulario-marca.jsp">Formulario Marcas</a></li>
+>>>>>>> Giovanni-Carrera
                                     </ul>
                                 </div>
 
@@ -56,7 +63,10 @@
                                     </ul>
                                 </div>
 
+<<<<<<< HEAD
 >>>>>>> Adrian-Arbizu
+=======
+>>>>>>> Giovanni-Carrera
                             </li>
                         </ul>
                     </div>

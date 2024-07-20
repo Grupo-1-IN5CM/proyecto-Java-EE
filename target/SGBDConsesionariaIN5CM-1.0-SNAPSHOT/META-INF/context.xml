@@ -5,6 +5,7 @@
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                username="luisPerez" password="Luis12***" driverClassName="com.mysql.cj.jdbc.Driver"
                url="jdbc:mysql://localhost:3306/SGBDConIN5CM?serverTimezone=GMT-6"/>         
 </Context>
@@ -20,3 +21,9 @@
            
 </Context>
 >>>>>>> Adrian-Arbizu
+=======
+               username="giovannicarrera" password="jjVuGB8u" driverClassName="com.mysql.cj.jdbc.Driver"
+               url="jdbc:mysql://localhost:3306/SGBDConIN5CM?serverTimezone=GMT-6"/>
+           
+</Context>
+>>>>>>> Giovanni-Carrera

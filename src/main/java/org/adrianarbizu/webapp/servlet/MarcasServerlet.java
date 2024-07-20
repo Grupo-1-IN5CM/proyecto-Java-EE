@@ -16,24 +16,39 @@ import org.adrianarbizu.webapp.service.MarcasService;
 @WebServlet("/marcas-servlet")
 public class MarcasServerlet extends HttpServlet {
 
+<<<<<<< HEAD
     private MarcasService marcasService;
+=======
+    private MarcasService ms;
+>>>>>>> Giovanni-Carrera
 
     @Override
     public void init() throws ServletException {
         super.init();
         
+<<<<<<< HEAD
         this.marcasService = new MarcasService();
+=======
+        this.ms = new MarcasService();
+>>>>>>> Giovanni-Carrera
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+<<<<<<< HEAD
         List<Marcas> marcas = marcasService.listarMarcas();
         req.setAttribute("marcas", marcas);
         req.getRequestDispatcher("/lista-marcas.jsp").forward(req, resp);
+=======
+        List<Marcas> marcas = ms.listarMarca();
+        req.setAttribute("marcas", marcas);
+        req.getRequestDispatcher("/lista-productos/lista-marca.jsp").forward(req, resp);
+>>>>>>> Giovanni-Carrera
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+<<<<<<< HEAD
         String nombreMarca = req.getParameter("nombreMarca");
         String descripcionMarca = req.getParameter("descripcionMarca");
 
@@ -65,5 +80,30 @@ public class MarcasServerlet extends HttpServlet {
         }
 
         return errores;
+=======
+        List<String> datosUsuario = new ArrayList<>();
+        List<String> errores = new ArrayList<>();
+
+        String nombreMarca = req.getParameter("nombreMarca");
+        String descripcionMarca = req.getParameter("descripcionMarca");
+
+        if (nombreMarca == null || nombreMarca.trim().isEmpty()) {
+            errores.add("El nombre es obligatorio.");
+        }
+        if (descripcionMarca == null || descripcionMarca.trim().isEmpty()) {
+            errores.add("La descripción es obligatoria.");
+        }
+        
+        if (errores.isEmpty()) {
+            datosUsuario.add(nombreMarca);
+            datosUsuario.add(descripcionMarca);
+
+            ms.agregarMarca(new Marcas(nombreMarca,descripcionMarca));
+            resp.sendRedirect(req.getContextPath()+"/index.jsp");
+        } else {
+            req.setAttribute("errores", errores);
+            getServletContext().getRequestDispatcher("/formulario-productos/formulario-marca.jsp").forward(req, resp);
+        }
+>>>>>>> Giovanni-Carrera
     }
 }

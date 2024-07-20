@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Adrian-Arbizu
 /*
@@ -12,11 +13,15 @@
 >>>>>>> Esteban-Cano
 =======
 >>>>>>> Adrian-Arbizu
+=======
+
+>>>>>>> Giovanni-Carrera
 package org.adrianarbizu.webapp.service;
 
 import java.util.List;
 import org.adrianarbizu.webapp.model.Usuario;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -38,6 +43,12 @@ public interface IUsuarioService {
 >>>>>>> Esteban-Cano
 =======
 >>>>>>> Adrian-Arbizu
+=======
+public interface IUsuarioService {
+    public List<Usuario> listarUsuario();
+    
+    public void agregarUsuario(Usuario usuario);
+>>>>>>> Giovanni-Carrera
     
     public void eliminarUsuario(int usuarioId);
     

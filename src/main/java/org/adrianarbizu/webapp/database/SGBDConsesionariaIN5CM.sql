@@ -22,6 +22,7 @@ create table Usuario(
 );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 create table Categoria(
 	categoriaId int not null auto_increment,
@@ -31,6 +32,8 @@ create table Categoria(
 );
 
 >>>>>>> Adrian-Arbizu
+=======
+>>>>>>> Giovanni-Carrera
 create table Marcas(
 	marcaId int not null auto_increment,
 	nombreMarca varchar(30),
@@ -69,6 +72,9 @@ create table Compras(
 -- LISTAR 
 Delimiter $$
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Giovanni-Carrera
 	Create procedure sp_ListarCategoria()
 		Begin
 			Select * from Categoria;
@@ -90,6 +96,7 @@ Delimiter $$
 	Create procedure sp_ListarUsuario()
 		Begin
 			Select * from Usuario;
+<<<<<<< HEAD
 =======
 	Create procedure sp_ListarUsuario()
 		Begin
@@ -101,17 +108,23 @@ Delimiter $$
                 Usuario.fechaRegistroUsuario
             from Usuario;
 >>>>>>> Adrian-Arbizu
+=======
+>>>>>>> Giovanni-Carrera
         End$$
 Delimiter ;
 
 INSERT INTO Usuario(usuarioId, nombreUsuario, emailUsuario, contraUsuario, fechaRegistroUsuario) VALUES
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Giovanni-Carrera
 (1, 'Juan Perez', 'juanPerez@gmail.com', 'password123', '2023-01-15'),
 (2, 'Maria Lopez', 'maria.lopez@Outlock.com', 'password456', '2023-02-20'),
 (3, 'Carlos Garcia', 'carlosGarcia@hotmail.com', 'password789', '2023-03-25'),
 (4, 'Ana Martinez', 'ana-Martinez@gmail.com', 'password012', '2023-04-30'),
 (5, 'Luis Fernandez', 'luisFernandez@gmail.com', 'password345', '2023-05-05'),
 (6, 'Elena Sanchez', 'elenaSanchez@hotmail.com', 'password678', '2023-06-10');
+<<<<<<< HEAD
 =======
 (1, 'Juan Perez', 'juan.perez@example.com', 'password123', '2023-01-15'),
 (2, 'Maria Lopez', 'maria.lopez@example.com', 'password456', '2023-02-20'),
@@ -120,6 +133,8 @@ INSERT INTO Usuario(usuarioId, nombreUsuario, emailUsuario, contraUsuario, fecha
 (5, 'Luis Fernandez', 'luis.fernandez@example.com', 'password345', '2023-05-05'),
 (6, 'Elena Sanchez', 'elena.sanchez@example.com', 'password678', '2023-06-10');
 >>>>>>> Adrian-Arbizu
+=======
+>>>>>>> Giovanni-Carrera
 
 call sp_ListarUsuario();
 
@@ -261,6 +276,32 @@ call sp_ListarCompras();
 
 
 
+-- LISTAR 
+Delimiter $$
+	Create procedure sp_ListarCarros()
+		Begin
+			Select * from Carros;
+        End$$
+Delimiter ;
+
+
+
+
+
+INSERT INTO carros(carroId, nombreCarro, descripcionCarro, marcaId, categoriaId, precioCarro) VALUES
+(1, 'Bugatti Veyron', 'Uno de los autos más rápidos del mundo W16', 1,1, 150),
+(2, 'Aston Martin Valkyrie', 'Auto deportivo híbrido con tecnología de F1', 2, 2, 200),
+(3, 'Chevrolet Corvette ZR1', 'Potente auto deportivo americano con motor V8 sobrealimentado', 3, 3, 130),
+(4, 'Ford GT', 'Inspirado en los autos de carrera, con un motor V6 biturbo', 4, 4, 140),
+(5, 'Nissan GT-R', 'Conocido como "Godzilla" por su gran rendimiento y tecnología', 5,5, 120),
+(6, 'Mercedes-AMG GT', 'Elegante deportivo con motor V8 biturbo y diseño aerodinámico', 6,6, 160);
+
+
+call sp_ListarCarros();
+
+
+
+
 
 -- LISTAR 
 Delimiter $$
@@ -278,6 +319,13 @@ INSERT INTO Compras(compraId, usuarioId, carroId, fechacompra, total) VALUES
 (4, 4, 4, '2023-09-25', 140),
 (5, 5, 5, '2023-10-30', 120),
 (6, 6, 6, '2023-11-05', 160);
+<<<<<<< HEAD
+=======
+
+
+
+call sp_ListarCompras();
+>>>>>>> Giovanni-Carrera
 
 
 

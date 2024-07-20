@@ -39,7 +39,11 @@
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-productos.jsp">Formulario Carros</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-categoria.jsp">Formulario Categorias</a></li>
                                     <li><a class="dropdown-item" href="./formulario-productos/formulario-compras.jsp">Formulario Compras</a></li>
+<<<<<<< HEAD
 >>>>>>> Adrian-Arbizu
+=======
+                                    <li><a class="dropdown-item" href="./formulario-productos/formulario-marca.jsp">Formulario Marcas</a></li>
+>>>>>>> Giovanni-Carrera
                                 </ul>
                             </div>
                             
@@ -59,10 +63,14 @@
                                     <li><a class="dropdown-item" href="./carro-servlet">Lista Carros</a></li>
                                     <li><a class="dropdown-item" href="./categoria-servlet">Lista Categirias</a></li>
                                     <li><a class="dropdown-item" href="./compras-servlet">Lista Compras</a></li>
+                                    <li><a class="dropdown-item" href="./marcas-servlet">Lista Marcas</a></li>
                                 </ul>
                             </div>
 
+<<<<<<< HEAD
 >>>>>>> Adrian-Arbizu
+=======
+>>>>>>> Giovanni-Carrera
                         </li>
                     </ul>
                 </div>

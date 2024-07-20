@@ -3,6 +3,7 @@ import java.util.List;
 import org.adrianarbizu.webapp.model.Marcas;
 
 public interface IMarcasService {
+<<<<<<< HEAD
     
     void agregarMarca(Marcas marca);
     
@@ -14,4 +15,15 @@ public interface IMarcasService {
     );
     
     Marcas buscarMarcaPorId(int marcaId);
+=======
+    public List<Marcas> listarMarca();
+    
+    public void agregarMarca(Marcas marcas);
+    
+    public void eliminarMarca(int marcaId);
+    
+    public Marcas buscarMarcaPorId(int marcaId);
+    
+    public void editarMarca(Marcas marcas);
+>>>>>>> Giovanni-Carrera
 }
