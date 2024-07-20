@@ -10,13 +10,14 @@
 
     <name>SGBDConsesionariaIN5CM</name>
     
-    <properties>
+    <properties> 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-    
+
+ 
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
@@ -28,19 +29,19 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.12</version>
-        </dependency>  
+        </dependency>
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
             <version>3.0.0</version>
-        </dependency>  
+            </dependency>
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>6.1.0.Final</version>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>
@@ -53,8 +54,8 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <url>http://localhost:8080/manager/text</url>
-                    <username>admin</username>
+                    <url>http://localhost:8080</url>
+                    <username>root</username>
                     <password>admin</password>
                 </configuration>
             </plugin>
@@ -66,5 +67,5 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build> 
 </project>

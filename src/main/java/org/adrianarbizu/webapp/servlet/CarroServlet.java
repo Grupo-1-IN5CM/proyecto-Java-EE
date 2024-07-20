@@ -33,35 +33,51 @@ public class CarroServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> datosCarro = new ArrayList<>();
-        List<String> errores = new ArrayList<>();
-
+        
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarCarro(req, resp);
+        }
+    }
+    
+    public void agregarCarro(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String nombreCarro = req.getParameter("nombreCarro");
         String descripcionCarro = req.getParameter("descripcionCarro");
-        String marcaCarro = req.getParameter("marcaCarro");
-        String precio = req.getParameter("precio");
-
+        String marcaId = req.getParameter("marcaId");
+        String categoriaId = req.getParameter("categoriaId");
+        String precioCarro = req.getParameter("precioCarro");
+        
+        
+        
+        List<String> datosCategoria = new ArrayList<>();
+        List<String> errores = new ArrayList<>();
+        
         if (nombreCarro == null || nombreCarro.trim().isEmpty()) {
             errores.add("El nombre del carro es obligatorio.");
         }
         if (descripcionCarro == null || descripcionCarro.trim().isEmpty()) {
             errores.add("La descripción del carro es obligatoria.");
         }
-        if (marcaCarro == null || marcaCarro.trim().isEmpty()) {
-            errores.add("La marca del carro es obligatoria.");
+        if (marcaId == null || marcaId.trim().isEmpty()) {
+            errores.add("El Id de la marca del carro es obligatorio.");
         }
-        if (precio == null || precio.trim().isEmpty()) {
-            errores.add("El precio del carro es obligatorio.");
+        if (categoriaId == null || categoriaId.trim().isEmpty()) {
+            errores.add("El Id de la marca del carro es obligatorio.");
         }
-
+        if (precioCarro == null || precioCarro.trim().isEmpty()) {
+            errores.add("El precio del carro es obligatorio y debe ser un número.");
+        }
         if (errores.isEmpty()) {
-            datosCarro.add(nombreCarro);
-            datosCarro.add(descripcionCarro);
-            datosCarro.add(marcaCarro);
-            datosCarro.add("Q." + precio);
+            datosCategoria.add(nombreCarro);
+            datosCategoria.add(descripcionCarro);
+            datosCategoria.add(marcaId);
+            datosCategoria.add(categoriaId);
+            datosCategoria.add(String.valueOf(precioCarro));
 
-            req.setAttribute("datosCarro", datosCarro);
-            getServletContext().getRequestDispatcher("/formulario-productos/formulario-productos.jsp").forward(req, resp);
+           
+           ps.agregarCarro(new Carro(nombreCarro,descripcionCarro,Integer.parseInt(marcaId),Integer.parseInt(categoriaId),Double.parseDouble(precioCarro)));
+           resp.sendRedirect(req.getContextPath()+"/index.jsp");
         } else {
             req.setAttribute("errores", errores);
             getServletContext().getRequestDispatcher("/formulario-productos/formulario-productos.jsp").forward(req, resp);
